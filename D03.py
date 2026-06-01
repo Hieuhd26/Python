@@ -66,6 +66,7 @@ if(b>c):
 print(a,b,c)
 '''
 #17 giai va bien luan pt ax+b=0
+'''
 a = int(input())
 b = int(input())
 print("pt" + str(a) + " va" + str(b) +": ") 
@@ -76,8 +77,49 @@ if(a==0):
         print("pt vo nghiem")
 else:
     print("nghiem cua pt là: ", (-b/a))
-    
+    '''
 #18 giai va bien luan pt ax^2 + bx +c =0 bai 19
+#vo nghiem: 10 2 10
+#nghiem kep: 1 2 1
+#2 nghiem: 1 6 5
+'''
+a = int(input())
+b = int(input())
+c = int(input())
+if(a==0):
+    if(b==0):
+        if(c==0):
+            print("pt có vô số nghiệm")
+        else:
+            print("pt vô nghiệm")
+    else:
+        print("pt có nghiệm là: ", -c/b)
+else:
+    delta = b**2 - 4*a*c
+    if delta >0:
+        candelta = delta**0.5
+        x1 = (-b+candelta)/(2*a)
+        x2 = (-b-candelta)/(2*a)
+        print("pt co hai nghiem phan biet", x1," ", x2)
+    elif delta ==0:
+        print("pt co mot nghiem kep la: ", -b/(2*a))
+    else:
+        print("pt vo nghiệm")
+'''            
 #19 nhap tháng, năm. Cho biết tháng đso có bao nhiêu ngày
+thang = int(input())
+nam = int(input())
+if(thang != 2):
+    if(thang == 1 or thang == 3 or thang == 5 or thang == 7 or thang == 8 or thang == 10 or thang == 12):
+        print("tháng ", thang, " năm ", nam, " có: 31 ngày")
+    else:
+        print("tháng ", thang, " năm ", nam, " có: 30 ngày")
+else:
+    if(nam % 400 ==0 or (nam % 4==0 and nam % 100 !=0)):
+        print("tháng ", thang, " năm ", nam, " có: 29 ngày")
+    else:
+        print("tháng ", thang, " năm ", nam, " có: 28 ngày")
+# tối ưu dùng if elif else
+
 #20 nhap vao ngay, thang. Tính từ ngày nhập đó đến đầu năm cách báo nhiêu ngày
 # hai so lien tiep lech 1 thi tru 1 di thoi
